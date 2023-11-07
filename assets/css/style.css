@@ -52,16 +52,12 @@ h2 {
 
 .form__control {
   position: relative;
-}
-
-.form__control:not(:last-of-type) {
   margin-bottom: 10px;
 }
 
 .form__label {
   display: flex;
   flex-direction: column;
-  /* font-size: 12px; */
 }
 
 .form__label-text {
