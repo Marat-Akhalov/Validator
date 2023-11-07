@@ -110,7 +110,7 @@ h2 {
 
 .form__error {
   position: absolute;
-  bottom: 0;
+  bottom: -15px;
   left: 0;
   visibility: hidden;
   color: var(--error-clr);
