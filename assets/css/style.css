@@ -80,6 +80,11 @@ h2 {
   border-bottom: 2px solid #eee;
 }
 
+.form__input:focus {
+  border-color: #0253fc;
+  outline: none;
+}
+
 .form__label-text {
   display: inline-flex;
   margin-bottom: 5px;
