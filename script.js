@@ -23,6 +23,12 @@ const showError = (input, message) => {
   formError.textContent = message;
 };
 
+const getFieldName = input => {
+  return input.dataset.field[0].toUpperCase() + input.dataset.field.slice(1);
+};
+
+console.log(getFieldName(email));
+
 const checkRequired = inputArr => {
   inputArr.forEach(input => {
     if (input.value.trim() === '') {
