@@ -36,3 +36,17 @@ const checkRequired = inputArr => {
     }
   });
 };
+
+const checkLength = (input, min, max) => {
+  if (input.value.length < min) {
+    showError(input, `${getFieldName(input)} must be at least ${min} characters`);
+    return;
+  }
+
+  if (input.value.length > max) {
+    showError(input, `${getFieldName(input)} must be less than ${max}`);
+    return;
+  }
+
+  showSuccess(input);
+};
