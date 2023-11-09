@@ -50,3 +50,11 @@ const checkLength = (input, min, max) => {
 
   showSuccess(input);
 };
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+
+  checkRequired([userName, email, password, password2]);
+  checkLength(userName, 3, 15);
+  checkLength(password, 6, 25);
+});
