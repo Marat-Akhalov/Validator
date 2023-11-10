@@ -4,17 +4,6 @@ const email = document.querySelector('.form__input--email');
 const password = document.querySelector('.form__input--password');
 const password2 = document.querySelector('.form__input--password-2');
 
-const checkEmail = input => {
-  const regExpPattern =
-    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-
-  if (regExpPattern.test(input.value.trim())) {
-    showSuccess(input);
-  } else {
-    showError(input, 'Email is not valid');
-  }
-};
-
 const showSuccess = input => {
   const formControl = input.closest('.form__control');
   formControl.className = 'form__control success';
@@ -25,6 +14,17 @@ const showError = (input, message) => {
   formControl.className = 'form__control error';
   const formError = formControl.querySelector('.form__error');
   formError.textContent = message;
+};
+
+const checkEmail = input => {
+  const regExpPattern =
+    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+  if (regExpPattern.test(input.value.trim())) {
+    showSuccess(input);
+  } else {
+    showError(input, 'Email is not valid');
+  }
 };
 
 const getFieldName = input => {
