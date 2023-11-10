@@ -4,11 +4,15 @@ const email = document.querySelector('.form__input--email');
 const password = document.querySelector('.form__input--password');
 const password2 = document.querySelector('.form__input--password-2');
 
-const isEmailValid = email => {
+const checkEmail = input => {
   const regExpPattern =
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-  return regExpPattern.test(email);
+  if (regExpPattern.test(input.value.trim())) {
+    showSuccess(input);
+  } else {
+    showError(input, 'Email is not valid');
+  }
 };
 
 const showSuccess = input => {
