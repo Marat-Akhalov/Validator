@@ -17,12 +17,12 @@ const checkEmail = input => {
 
 const showSuccess = input => {
   const formControl = input.closest('.form__control');
-  formControl.classList.add('success');
+  formControl.className = 'form__control success';
 };
 
 const showError = (input, message) => {
   const formControl = input.closest('.form__control');
-  formControl.classList.add('error');
+  formControl.className = 'form__control error';
   const formError = formControl.querySelector('.form__error');
   formError.textContent = message;
 };
