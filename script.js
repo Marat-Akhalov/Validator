@@ -27,6 +27,12 @@ const checkEmail = input => {
   }
 };
 
+const checkPasswordsMatch = (input1, input2) => {
+  if (input1.value !== input2.value) {
+    showError(input2, 'Passwords do not match');
+  }
+};
+
 const getFieldName = input => {
   return input.dataset.field[0].toUpperCase() + input.dataset.field.slice(1);
 };
